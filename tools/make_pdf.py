@@ -92,15 +92,15 @@ main{margin:0}
 .pzone{border-radius:3mm}
 .planbox{padding:7mm;border-radius:5mm}
 .plan{margin:0 auto}
-.mk{width:5.2mm;height:5.2mm;margin:-2.6mm 0 0 -2.6mm;font-size:6.6pt;box-shadow:0 0 0 .5mm var(--bg2)}
+.mk{display:none!important}  /* plans print clean; the lists name the rooms */
 .planfoot{font-size:7.4pt;margin-top:3.5mm}
 .pside h3{font-size:16pt}
 .pside .rt{font-size:6.6pt}
 .pside p{font-size:8.4pt;margin:3mm 0 4mm}
 .homes{gap:5mm}
 .homes h4{font-size:6.4pt;margin-bottom:1.5mm}
-.rl li{font-size:7.8pt;padding:1.6mm 0;grid-template-columns:6mm 1fr}
-.rl li i{font-size:6.2pt}
+.rl li{font-size:7.8pt;padding:1.6mm 0;grid-template-columns:1fr}
+.rl li i{display:none}
 .levels{margin-top:6mm;padding-top:3.5mm;gap:6mm}
 .levels .n{font-size:14pt}
 .levels .l{font-size:6.4pt;margin-top:1.5mm}
@@ -155,7 +155,8 @@ PRINT_JS = r"""
   const sizePlan = (wrap, hmm) => { const plan = $('.plan', wrap), img = $('img', plan); const w = +img.getAttribute('width'), h = +img.getAttribute('height'), px = hmm * MM; plan.style.height = px + 'px'; plan.style.width = (px * w / h) + 'px'; img.style.width = '100%'; img.style.height = '100%'; };
   sizePlan(plans.unit, 112); sizePlan(plans.floor, 84);
   /* screen-only wording */
-  const lede = take('#plans .lede'); lede.textContent = lede.textContent.replace(' Hover a number, or a room in the list.', ' The numbers key to the room lists.');
+  const lede = take('#plans .lede'); lede.textContent = lede.textContent.replace(' Hover a number, or a room in the list.', '');
+  const fn = take('#plans .foot-note'); fn.textContent = fn.textContent.replace('; the numbered markers sit where the rooms are labelled on the sheet', '');
   const sc = take('#sitecap'); sc.innerHTML = sc.innerHTML.replace(' · hover any part of the plot', '');
   page('cover', [take('#welcome .stamp'), take('#welcome .hero')]);
   page('band', [H('building'), take('#building .two')]);
@@ -163,7 +164,7 @@ PRINT_JS = r"""
   page('', [H('residence'), take('#residence .two')]);
   page('', [H('residence'), take('#residence .moves'), take('#residence .wide')]);
   page('', [H('plans'), take('#plans .title'), take('#plans .lede'), plans.unit]);
-  page('', [H('plans'), plans.floor, take('#plans .foot-note')]);
+  page('', [H('plans'), plans.floor, fn]);
   page('band', [H('materials'), take('#materials .title'), take('#materials .lede'), take('#materials .mats')]);
   page('band', [H('materials'), take('#materials .spec')]);
   /* views over two pages: the two large views, then the other five */
