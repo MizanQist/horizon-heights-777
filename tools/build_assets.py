@@ -2,8 +2,9 @@
 """Stage the renders and the upper-floor plan from the Heights 777 brochure.
 
 Sources come from SRC (a local folder of the brochure's assets) or, when that is
-unset or missing, from the brochure's GitHub Pages site. JPEG renders are resized
-to 1800 px wide (q82). The upper-floor plan is copied whole (plan-upper.png) and
+unset or missing, from the brochure's GitHub Pages site. JPEG renders keep their
+full source resolution (the cover is a full-bleed photograph and the PDF is for
+print) and are re-encoded at q84. The upper-floor plan is copied whole (plan-upper.png) and
 cropped to the centre residence (plan-14.png, x 33-73 % of the sheet; ROOMS in
 index.html uses the same crop).
 Run:  [SRC=/path/to/brochure/assets] python3 tools/build_assets.py
@@ -17,7 +18,6 @@ PAGES = "https://mizanqist.github.io/heights-777/assets/"
 DST = Path(__file__).resolve().parent.parent / "assets"
 RENDERS = ["corner-dusk.jpg", "front-clear.jpg", "front-overcast.jpg", "entrance-day.jpg",
            "entrance-dusk.jpg", "balconies-aerial.jpg", "street-day.jpg"]
-MAX_W = 1800
 CROP = (0.33, 0.73)
 
 
@@ -33,9 +33,7 @@ def main():
     for name in RENDERS:
         im = Image.open(io.BytesIO(fetch(name)))
         im.load()
-        if im.width > MAX_W:
-            im = im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS)
-        im.convert("RGB").save(DST / name, "JPEG", quality=82, optimize=True, progressive=True)
+        im.convert("RGB").save(DST / name, "JPEG", quality=84, optimize=True, progressive=True)
         print(name, im.size, (DST / name).stat().st_size // 1024, "KB")
     raw = fetch("plan-upper.png")
     (DST / "plan-upper.png").write_bytes(raw)
