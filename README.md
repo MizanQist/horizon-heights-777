@@ -13,7 +13,7 @@ One page, seven sheets, built on the SB2 dossier (`~/Developer/ladan-maitama-vie
 
 ## Print edition
 
-`apartment-14-heights-777.pdf` is a fourteen-page A4 landscape version for print (front cover, twelve pages, charcoal back cover; an even count for duplex binding), linked from the desk sheet. `python3 tools/make_pdf.py` regenerates it from `index.html` with Playwright, as in the SB2 dossier: a print stylesheet and a page cutter are injected at build time, the plan PNGs are flattened onto the panel colour, both plan views are rendered statically without the numbered markers (the room lists stay, unnumbered) and the views run over two pages. No bleed or crop marks. Regenerate after editing copy or plans.
+`apartment-14-heights-777.pdf` is a fourteen-page A4 landscape version for print (front cover, twelve pages, charcoal back cover; an even count for duplex binding), linked from the desk sheet. `python3 tools/make_pdf.py` regenerates it from `index.html` with Playwright, as in the SB2 dossier: a print stylesheet and a page cutter are injected at build time, the plan PNGs are flattened onto the panel colour, both plan views are rendered statically with room names written in place of the numbered markers (`LABELS` in the script, positions in % of the Apartment 14 crop; the whole-floor view reuses the main rooms) and the views run over two pages. No bleed or crop marks. Regenerate after editing copy or plans.
 
 ## Hosting
 

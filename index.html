@@ -328,7 +328,8 @@ body.locked{overflow:hidden}
 
 /* ——— Heights 777: plan views ——— */
 .plan.crop{max-width:500px}
-.pzone{position:absolute;top:1%;bottom:1%;left:35%;width:34%;border-radius:16px;background:var(--acc-soft);border:1px solid var(--acc2);pointer-events:none}
+.pzone{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.pzone polygon{fill:var(--acc-soft);stroke:var(--acc2);stroke-width:1.2;stroke-linejoin:round;vector-effect:non-scaling-stroke}
 .ptag{position:absolute;top:-6px;transform:translate(-50%,-100%);font:500 .7rem/1 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);white-space:nowrap}
 .ptag.mine{color:var(--acc)}
 .plan.full{margin-top:22px}
@@ -802,7 +803,8 @@ body.locked{overflow:hidden}
     var F = VIEW[v], n = 0, lh = '', side = '';
     plan.classList.toggle('crop', v==='unit'); plan.classList.toggle('full', v==='floor');
     planimg.src = asset(F.src); planimg.width = F.sz[0]; planimg.height = F.sz[1]; planimg.alt = F.alt; planlab.innerHTML = F.lab;
-    if(v==='floor') lh += '<div class="pzone"></div><span class="ptag" style="left:17%">West penthouse</span><span class="ptag mine" style="left:52%">Apartment 14</span><span class="ptag" style="left:85%">East residence</span>';
+    /* Apartment 14's outline on the sheet, in % of the plan: rooms and rear balconies along the north, the living room and front balcony between the cores */
+    if(v==='floor') lh += '<svg class="pzone" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="35,3.2 72.3,3.2 72.3,38.3 63.4,38.3 63.4,43.8 58.6,43.8 58.6,93.2 45,93.2 45,38.3 35,38.3"/></svg><span class="ptag" style="left:17%">West penthouse</span><span class="ptag mine" style="left:52%">Apartment 14</span><span class="ptag" style="left:85%">East residence</span>';
     ROOMS[v].forEach(function(grp, gi){
       var items = '';
       grp.r.forEach(function(r){ n++; lh += '<span class="mk'+(gi?' r':'')+'" data-i="'+n+'" style="left:'+r[1]+'%;top:'+r[2]+'%" title="'+r[0]+'">'+n+'</span>'; items += '<li data-i="'+n+'"><i>'+String(n).padStart(2,'0')+'</i><span>'+r[0]+'</span></li>'; });

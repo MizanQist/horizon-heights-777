@@ -16,6 +16,25 @@ ROOT = Path(__file__).resolve().parent.parent
 PANEL = (246, 246, 244)  # --bg2, the plan panel
 MM = 96 / 25.4
 
+# Room names written on the printed plans, as (name, x %, y %, style) on the Apartment 14
+# crop (plan-14.png, x 33-73 % of the sheet). Each sits in clear floor beside the furniture;
+# "sm" is for the narrow en-suites, "core" for the shared spaces. The whole-floor view reuses
+# the main rooms at x = 33 + 0.4 x.
+LABELS = [
+    ("Kitchen", 17, 33, ""), ("Bedroom 1", 40.5, 33.5, ""), ("Bedroom 2", 86, 33.5, ""),
+    ("Bath", 56.8, 15.6, "sm"), ("Bath", 71.8, 15.6, "sm"), ("Dressing", 58.75, 27, "sm"), ("Dressing", 69.75, 27, "sm"),
+    ("Entrance", 63.5, 39.5, ""), ("Living room", 45, 79.5, ""), ("WC", 58.1, 86, "sm"),
+    ("Balcony", 41, 89, ""), ("Balcony", 45, 4.1, ""),
+    ("Courtyard", 14.5, 52.5, "core"), ("Lift", 14.5, 71, "core"), ("Stair", 71.5, 56, "core"), ("Lift", 70, 86.5, "core"),
+]
+FLOOR_LABELS = {"Kitchen", "Bedroom 1", "Bedroom 2", "Living room", "Bath", "Lift"}
+
+
+def plan_labels() -> dict:
+    unit = [{"t": t, "x": x, "y": y, "c": c} for t, x, y, c in LABELS]
+    floor = [dict(l, x=round(33 + 0.4 * l["x"], 2)) for l in unit if l["t"] in FLOOR_LABELS]
+    return {"unit": unit, "floor": floor}
+
 PRINT_CSS = r"""
 @page{size:297mm 210mm;margin:0}
 html,body{margin:0;padding:0;background:var(--bg)}
@@ -89,10 +108,15 @@ main{margin:0}
 .plan.crop,.plan.full{max-width:none}
 .plan.full{margin-top:6mm}
 .ptag{font-size:6.4pt;top:-1.5mm}
-.pzone{border-radius:3mm}
 .planbox{padding:7mm;border-radius:5mm}
 .plan{margin:0 auto}
-.mk{display:none!important}  /* plans print clean; the lists name the rooms */
+.mk{display:none!important}  /* plans print with room names instead of numbers */
+.plab{position:absolute;transform:translate(-50%,-50%);white-space:nowrap;font:500 6.2pt/1 var(--fb);letter-spacing:.01em;color:var(--ink);pointer-events:none}
+.plab.sm{font-size:5pt}
+.plab.core{font-size:5pt;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3)}
+.pf .plab{font-size:5.2pt}
+.pf .plab.sm{font-size:4.6pt}
+.pf .plab.core{font-size:4.6pt}
 .planfoot{font-size:7.4pt;margin-top:3.5mm}
 .pside h3{font-size:16pt}
 .pside .rt{font-size:6.6pt}
@@ -154,6 +178,8 @@ PRINT_JS = r"""
   ['unit', 'floor'].forEach(v => { window.__renderPlan(v); plans[v] = $('.planwrap').cloneNode(true); });
   const sizePlan = (wrap, hmm) => { const plan = $('.plan', wrap), img = $('img', plan); const w = +img.getAttribute('width'), h = +img.getAttribute('height'), px = hmm * MM; plan.style.height = px + 'px'; plan.style.width = (px * w / h) + 'px'; img.style.width = '100%'; img.style.height = '100%'; };
   sizePlan(plans.unit, 112); sizePlan(plans.floor, 84);
+  /* room names in place of the numbered markers */
+  ['unit', 'floor'].forEach(v => { const plan = $('.plan', plans[v]); if (v === 'floor') plan.classList.add('pf'); window.__LABELS[v].forEach(l => { const s = document.createElement('span'); s.className = 'plab ' + l.c; s.style.left = l.x + '%'; s.style.top = l.y + '%'; s.textContent = l.t; plan.appendChild(s); }); });
   /* screen-only wording */
   const lede = take('#plans .lede'); lede.textContent = lede.textContent.replace(' Hover a number, or a room in the list.', '');
   const fn = take('#plans .foot-note'); fn.textContent = fn.textContent.replace('; the numbered markers sit where the rooms are labelled on the sheet', '');
@@ -203,7 +229,7 @@ async def main(out: Path):
     async with async_playwright() as p:
         b = await p.chromium.launch()
         pg = await b.new_page(viewport={"width": round(297 * MM), "height": round(210 * MM)})
-        await pg.add_init_script("window.__PRINT=true;window.__assets=" + json.dumps(assets) + ";")
+        await pg.add_init_script("window.__PRINT=true;window.__assets=" + json.dumps(assets) + ";window.__LABELS=" + json.dumps(plan_labels()) + ";")
         await pg.goto((ROOT / "index.html").as_uri())
         await pg.add_style_tag(content=PRINT_CSS)
         n = await pg.evaluate(PRINT_JS)
