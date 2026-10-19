@@ -15,4 +15,6 @@ One page, seven sheets, built on the SB2 dossier (`~/Developer/ladan-maitama-vie
 
 `apartment-14-heights-777.pdf` is a fourteen-page A4 landscape version for print (front cover, twelve pages, charcoal back cover; an even count for duplex binding), linked from the desk sheet. `python3 tools/make_pdf.py` regenerates it from `index.html` with Playwright, as in the SB2 dossier: a print stylesheet and a page cutter are injected at build time, the plan PNGs are flattened onto the panel colour, both plan views are rendered statically and the views run over two pages. No bleed or crop marks. Regenerate after editing copy or plans.
 
-Not hosted yet. `robots.txt` and the robots meta keep it out of search results once it is.
+## Hosting
+
+Live at https://mizanqist.github.io/horizon-heights-777/ from the public repo MizanQist/horizon-heights-777 (GitHub Pages, `main` at `/`; `.nojekyll` is included), with the print edition at https://mizanqist.github.io/horizon-heights-777/apartment-14-heights-777.pdf. `robots.txt` and the robots meta keep the page out of search results, but anyone with the link can open it. Edit, commit and push from `~/Developer/horizon-heights-777`: `git add -A && git -c user.name=MizanQist -c user.email=nabildeealee@icloud.com commit -m "…" && git push`; Pages rebuilds within a minute.

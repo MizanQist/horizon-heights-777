@@ -40,7 +40,7 @@ def main(out: str):
     assets = {f"assets/{p.name}": data_uri(p) for p in sorted((ROOT / "assets").iterdir()) if p.suffix in (".jpg", ".png")}
     html = re.sub(r'src="(assets/[^"]+)"', lambda m: f'src="{assets[m.group(1)]}"', html)
     html = html.replace('<link rel="icon" href="favicon.svg" type="image/svg+xml">', "")
-    html = re.sub(r'\s*<li class="self">.*?</li>', "", html)  # the print edition is not hosted yet
+    html = html.replace('href="apartment-14-heights-777.pdf"', 'href="https://mizanqist.github.io/horizon-heights-777/apartment-14-heights-777.pdf"')  # a relative PDF link cannot resolve from the preview
     head = re.search(r"<head>(.*?)</head>", html, re.S).group(1)
     body = re.search(r"<body>(.*?)</body>", html, re.S).group(1)
     head = re.sub(r'<meta (charset|name="viewport")[^>]*>', "", head)
