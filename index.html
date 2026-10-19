@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apartment 14 at Heights 777</title>
+<meta name="description" content="Private dossier for Horizon Growth Limited: Apartment 14, the centre residence on the fifth floor of Heights 777, Plot 777, CAD Zone A07, Parakou Street, Wuse II, Abuja — the building, the residence, its plan and materials.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#cbcbca">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&family=Manrope:wght@300;400;500;600&display=swap">
+<style>
+/* Apartment 14 at Heights 777: the Atlantic View system, as in the SB2 dossier. Grey field, off-white panels and bands, dark type, one timber accent; Outfit light display, Manrope body. */
+:root{
+  --bg:#cbcbca;--bg2:#f6f6f4;--bg3:#e2e2e0;--bg-rgb:203,203,202;
+  --ink:#1f2227;--ink2:rgba(31,34,39,.76);--ink3:rgba(31,34,39,.70);
+  --acc:#6e4a22;--acc2:#c7955f;--acc3:#d9a66c;--acc-soft:rgba(168,116,60,.18);
+  --line:rgba(31,34,39,.16);--line2:rgba(31,34,39,.38);
+  --green:#cdddc6;--green2:#a9bfa3;--water:#c9d6e2;--photo-ink:#e9e3d7;
+  --r:20px;--r2:14px;
+  --fd:'Outfit',system-ui,sans-serif;--fb:'Manrope',system-ui,sans-serif;
+  --rail:252px;--gut:clamp(20px,5vw,72px);
+  --ease:cubic-bezier(.16,1,.3,1);
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 var(--fb);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.num{font-variant-numeric:tabular-nums}
+.k{font:500 .72rem/1.5 var(--fb);letter-spacing:.24em;text-transform:uppercase;color:var(--acc)}
+
+/* ——— title-block rail ——— */
+.rail{position:sticky;top:0;align-self:start;height:100vh;height:100svh;width:var(--rail);border-right:1px solid var(--line);padding:30px 26px 26px;display:flex;flex-direction:column;gap:34px;background:var(--bg2);z-index:40}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark .sb{display:inline-flex;align-items:center;height:26px;padding:0 10px;border:1px solid var(--acc2);border-radius:999px;font:500 .7rem/1 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
+.mark .t{font:300 .78rem/1 var(--fd);letter-spacing:.3em;text-transform:uppercase;white-space:nowrap}
+.index{display:flex;flex-direction:column;gap:2px;margin:0;padding:0;list-style:none}
+.index a{display:grid;grid-template-columns:28px 1fr;align-items:baseline;gap:10px;padding:10px 10px;margin:0 -10px;border-radius:999px;text-decoration:none;font-size:.9rem;color:var(--ink2);transition:background .3s,color .3s}
+.index a i{font-style:normal;font:500 .7rem/1 var(--fb);letter-spacing:.14em;color:var(--ink3)}
+.index a:hover{background:var(--bg3);color:var(--ink)}
+.index a.on{color:var(--ink);font-weight:500}
+.index a.on i{color:var(--acc)}
+.tblock{margin-top:auto;border-top:1px solid var(--line);padding-top:18px}
+.tblock dl{margin:0;display:grid;grid-template-columns:1fr;gap:12px}
+.tblock dt{font:500 .7rem/1 var(--fb);letter-spacing:.22em;text-transform:uppercase;color:var(--ink3)}
+.tblock dd{margin:5px 0 0;font-size:.86rem;line-height:1.4;color:var(--ink2)}
+.railclose{display:none}
+
+/* ——— phone bar ——— */
+.bar{display:none;position:sticky;top:0;z-index:30;height:64px;align-items:center;justify-content:space-between;padding:0 20px;background:rgba(var(--bg-rgb),.78);backdrop-filter:blur(16px) saturate(140%);-webkit-backdrop-filter:blur(16px) saturate(140%);border-bottom:1px solid var(--line)}
+.bar .idxbtn{height:40px;padding:0 18px;border:1px solid var(--line2);border-radius:999px;font:500 .72rem/1 var(--fb);letter-spacing:.2em;text-transform:uppercase}
+
+/* ——— sheets ——— */
+body{display:grid;grid-template-columns:var(--rail) minmax(0,1fr)}
+.front{grid-column:1/-1}
+main{min-width:0}
+.sheet{padding:clamp(60px,8vw,120px) var(--gut) clamp(68px,9vw,136px)}
+.sheet.band{background:var(--bg2)}
+.sheet > *{max-width:1360px}
+.shead{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:22px;border-bottom:1px solid var(--line);padding:0 0 16px;margin-bottom:clamp(36px,5vw,64px)}
+.shead .sno,.shead .smeta{font:500 .72rem/1.5 var(--fb);letter-spacing:.24em;text-transform:uppercase;color:var(--ink3);white-space:nowrap}
+.shead .sno{color:var(--acc)}
+.shead h2{margin:0;font:300 .9rem/1 var(--fd);letter-spacing:.3em;text-transform:uppercase}
+.title{font:200 clamp(2.1rem,4.3vw,3.7rem)/1.05 var(--fd);letter-spacing:-.005em;margin:0 0 24px;text-wrap:balance;max-width:17ch}
+.title em{font-style:normal;font-weight:300;color:var(--acc)}
+.lede{font-size:clamp(1.05rem,1.35vw,1.25rem);line-height:1.6;max-width:58ch;margin:0 0 20px;color:var(--ink2);font-weight:300}
+.body{max-width:60ch;margin:0 0 1.1em;color:var(--ink2)}
+.cap{font:400 .84rem/1.6 var(--fb);letter-spacing:.01em;color:var(--ink3);margin-top:16px}
+.cap b{color:var(--ink);font-weight:500}
+.two{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,80px);align-items:start}
+.two.rev{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 0}
+.btn{display:inline-flex;align-items:center;gap:10px;height:50px;padding:0 26px;border-radius:999px;border:1px solid var(--ink);background:transparent;color:var(--ink);font:500 .86rem var(--fb);letter-spacing:.03em;text-decoration:none;white-space:nowrap;transition:transform .25s var(--ease),background .3s,border-color .3s,color .3s}
+.btn:hover{background:rgba(31,34,39,.07)}
+.btn:active{transform:scale(.97)}
+.btn.pri{background:var(--acc2);border-color:var(--acc2);color:var(--ink)}
+.btn.pri:hover{background:var(--acc3);border-color:var(--acc3)}
+.btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.frame{position:relative;background:var(--bg3);overflow:hidden;border-radius:var(--r)}
+.frame img{width:100%;height:100%;object-fit:cover}
+.sched{margin:0;display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
+.sched div{display:grid;grid-template-columns:minmax(120px,36%) 1fr;gap:18px;padding:13px 0;border-bottom:1px solid var(--line);font-size:.92rem;line-height:1.5;color:var(--ink2)}
+.sched dt{font:500 .7rem/1.6 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);padding-top:3px}
+.sched dd{margin:0}
+
+/* ——— front cover ——— */
+.front{position:relative;height:100vh;height:100svh;min-height:540px;display:flex;flex-direction:column;justify-content:space-between;padding:clamp(24px,3.4vw,44px) var(--gut);color:#f6f6f4;background:var(--ink);overflow:hidden;isolation:isolate}
+.front > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%;z-index:-2}
+.front::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(20,22,26,.42) 0%,rgba(20,22,26,0) 24%,rgba(20,22,26,0) 44%,rgba(20,22,26,.66) 100%)}
+.front .ftop,.front .fbot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 28px;font:500 .72rem/1.5 var(--fb);letter-spacing:.24em;text-transform:uppercase}
+.front .fbot{align-items:end}
+.front .ftitle{margin:0;font:200 clamp(3.4rem,10.5vw,10rem)/.95 var(--fd);letter-spacing:-.02em}
+.front .ftitle small{display:block;font:500 .72rem/1.5 var(--fb);letter-spacing:.24em;text-transform:uppercase;margin-bottom:clamp(14px,2vw,26px)}
+.front .cue{display:inline-flex;align-items:center;gap:12px;height:46px;padding:0 22px;border:1px solid rgba(246,246,244,.6);border-radius:999px;text-decoration:none;transition:background .3s}
+.front .cue:hover{background:rgba(246,246,244,.14)}
+.front .cue svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.5}
+
+/* ——— 00 welcome ——— */
+.welcome{padding-top:clamp(40px,6vw,80px)}
+.stamp{display:flex;flex-wrap:wrap;gap:8px 22px;margin-bottom:clamp(44px,7vw,100px);font:500 .72rem/1.5 var(--fb);letter-spacing:.24em;text-transform:uppercase;color:var(--ink3)}
+.stamp span::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--acc2);margin:0 10px 2px 0}
+.hero{display:grid;grid-template-columns:minmax(0,11fr) minmax(0,9fr);gap:clamp(32px,5vw,80px);align-items:end}
+.h1{font:200 clamp(2.9rem,6.4vw,6.6rem)/1 var(--fd);letter-spacing:-.01em;margin:0 0 30px;text-wrap:balance}
+.h1 small{display:block;font:500 .72rem/1.5 var(--fb);letter-spacing:.24em;text-transform:uppercase;color:var(--acc);margin-bottom:28px}
+.figs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin:46px 0 0;padding:22px 0 0;border-top:1px solid var(--line);list-style:none}
+.figs .n{font:200 clamp(2rem,3.2vw,3rem)/1 var(--fd);letter-spacing:-.01em}
+.figs .n small{font-size:1rem;font-weight:300;color:var(--ink3);margin-left:4px}
+.figs .l{margin-top:10px;font:500 .7rem/1.6 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--ink3)}
+.hv{aspect-ratio:16/10}
+
+/* ——— 01 the building · site plan ——— */
+.sitebox{background:var(--bg2);border-radius:var(--r);padding:clamp(16px,2.4vw,30px)}
+.band .sitebox{background:var(--bg3)}
+.siteplan{width:100%;aspect-ratio:48/40.6;display:block}
+.siteplan svg{width:100%;height:100%;overflow:visible}
+.siteplan.draw .sp-fence{stroke-dashoffset:0}
+.sitecap{min-height:48px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:.9rem;line-height:1.5;color:var(--ink2)}
+.sitecap b{font-weight:500;color:var(--ink)}
+.sitecap i{font-style:normal;font:500 .7rem/1 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin-left:10px}
+.legend{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.legend li{display:inline-flex;align-items:center;gap:9px;height:38px;padding:0 14px;border:1px solid var(--line);border-radius:999px;font-size:.82rem;color:var(--ink2);cursor:pointer;transition:border-color .3s,background .3s,color .3s}
+.legend li:hover,.legend li.on{border-color:var(--acc2);color:var(--ink);background:var(--bg2)}
+.legend li .sw{width:10px;height:10px;border-radius:50%;border:1px solid var(--ink)}
+.legend li.mine .sw{background:var(--acc2);border-color:var(--acc2)}
+.legend li.mine{color:var(--ink);font-weight:500}
+.enc2{margin-top:clamp(44px,6vw,80px)}
+.aer{aspect-ratio:5/6}
+
+/* ——— 02 your residence ——— */
+.facts{margin:0}
+.elev{background:var(--bg2);border-radius:var(--r);padding:clamp(18px,2.6vw,34px)}
+.elev svg{width:100%;height:auto;display:block;overflow:visible}
+.moves{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.moves li{border-top:1px solid var(--line);padding-top:16px;font-size:.92rem;line-height:1.6;color:var(--ink2)}
+.moves b{display:block;font:300 1.35rem/1.2 var(--fd);color:var(--ink);margin-bottom:8px}
+.wide{margin-top:clamp(44px,6vw,80px)}
+.wide .frame{aspect-ratio:21/9}
+
+/* ——— 03 plans ——— */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.tab{height:42px;padding:0 18px;border-radius:999px;border:1px solid var(--line2);color:var(--ink2);font:500 .82rem var(--fb);transition:background .3s,color .3s,border-color .3s}
+.tab:hover{border-color:var(--ink);color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg2);border-color:var(--ink)}
+.planwrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(26px,4vw,56px);align-items:start}
+.planbox{background:var(--bg2);border-radius:var(--r);padding:clamp(16px,2.6vw,38px);position:relative}
+.plan{position:relative;width:100%;max-width:1100px;margin:0 auto}
+.plan img{width:100%;height:auto;display:block}
+.mk{position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:var(--acc2);color:var(--ink);font:600 .7rem/1 var(--fb);display:flex;align-items:center;justify-content:center;cursor:default;transition:transform .25s var(--ease),opacity .25s;box-shadow:0 0 0 2px var(--bg2)}
+.mk.r{background:var(--ink);color:var(--bg2)}
+.mk.hi{transform:scale(1.35);z-index:2}
+.mk.dim{opacity:.35}
+.planfoot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;margin-top:18px;font:400 .84rem/1.6 var(--fb);letter-spacing:.01em;color:var(--ink3)}
+.planfoot b{color:var(--ink);font-weight:500}
+.tbtn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 16px;border:1px solid var(--line2);border-radius:999px;font:500 .72rem/1 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--ink);transition:border-color .3s,background .3s}
+.tbtn:hover{border-color:var(--acc2);background:var(--bg3)}
+.tbtn svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round}
+.pside h3{margin:0 0 6px;font:300 1.8rem/1.1 var(--fd)}
+.pside .rt{font:500 .7rem/1.6 var(--fb);letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
+.pside p{color:var(--ink2);font-size:.95rem;margin:14px 0 22px}
+.homes{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.homes h4{margin:0 0 8px;display:flex;align-items:center;gap:9px;font:500 .7rem/1.6 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+.homes h4 .k{width:10px;height:10px;border-radius:50%;background:var(--acc2)}
+.homes h4 .k.r{background:var(--ink)}
+.rl{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.rl li{display:grid;grid-template-columns:26px 1fr;gap:6px;padding:8px 0;border-bottom:1px solid var(--line);font-size:.86rem;color:var(--ink2);cursor:default;transition:color .2s}
+.rl li i{font-style:normal;font:500 .7rem/1.9 var(--fb);letter-spacing:.08em;color:var(--ink3)}
+.rl li.hi{color:var(--acc);font-weight:500}
+.rl li.hi i{color:var(--acc)}
+.levels{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:clamp(36px,5vw,60px) 0 0;border-top:1px solid var(--line);padding-top:18px}
+.levels .n{font:200 1.6rem/1 var(--fd);color:var(--ink)}
+.levels .l{margin-top:8px;font:500 .7rem/1.6 var(--fb);letter-spacing:.18em;text-transform:uppercase;color:var(--ink3)}
+.levels .on .n{color:var(--acc)}
+.foot-note{font-size:.84rem;color:var(--ink3);max-width:72ch;margin:26px 0 0;line-height:1.6}
+
+/* ——— 04 materials ——— */
+.mats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;margin:0 0 clamp(44px,6vw,76px)}
+.mat{border-radius:var(--r2);overflow:hidden;background:var(--bg2)}
+.band .mat{background:var(--bg3)}
+.mat .sw{aspect-ratio:4/3;position:relative}
+.mat .mt{padding:14px 16px 16px}
+.mat .mt i{display:block;font-style:normal;font:500 .7rem/1 var(--fb);letter-spacing:.22em;color:var(--acc);margin-bottom:8px}
+.mat .mt b{display:block;font:300 1.1rem/1.2 var(--fd);margin-bottom:5px;color:var(--ink)}
+.mat .mt span{font-size:.8rem;line-height:1.45;color:var(--ink3)}
+.spec{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(30px,5vw,64px) clamp(30px,6vw,88px)}
+.spec h4{margin:0 0 14px;font:300 1.6rem/1.15 var(--fd)}
+
+/* ——— 05 views ——— */
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:clamp(150px,16vw,230px);grid-auto-flow:dense;gap:12px}
+.gal figure{margin:0;position:relative;overflow:hidden;border-radius:var(--r2);background:var(--bg3);cursor:zoom-in}
+.gal figure img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figure.big{grid-column:span 2;grid-row:span 2;border-radius:var(--r)}
+.gal figure.tall{grid-row:span 2}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;background:linear-gradient(180deg,transparent,rgba(31,34,39,.8));color:#fff;font:400 .84rem/1.5 var(--fb);letter-spacing:.01em}
+.gal figcaption b{font-weight:600}
+
+/* ——— 06 desk ——— */
+.desk{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,80px);align-items:start}
+.desk h4{margin:0 0 16px;font:300 1.6rem/1.15 var(--fd)}
+.acts{display:grid;gap:12px;margin-top:28px}
+.act{display:grid;grid-template-columns:48px 1fr auto;align-items:center;gap:16px;padding:14px 18px 14px 14px;background:var(--bg2);border:1px solid transparent;border-radius:var(--r2);text-decoration:none;transition:border-color .3s,transform .25s var(--ease)}
+.act:hover{border-color:var(--acc2);transform:translateY(-1px)}
+.act .ic{width:48px;height:48px;border-radius:50%;background:var(--bg3);display:grid;place-items:center;color:var(--acc)}
+.act .ic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.act b{display:block;font:300 1.1rem/1.2 var(--fd);color:var(--ink)}
+.act span{display:block;font-size:.82rem;color:var(--ink3);margin-top:3px}
+.act i{font-style:normal;font:500 .7rem/1 var(--fb);letter-spacing:.22em;text-transform:uppercase;color:var(--acc)}
+.docs{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.docs li{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--ink)}
+.docs li span{color:var(--ink3);font-size:.82rem;display:block;margin-top:2px}
+.docs a{font:500 .7rem/1 var(--fb);letter-spacing:.22em;text-transform:uppercase;text-decoration:none;color:var(--acc);white-space:nowrap;border:1px solid var(--acc2);border-radius:999px;padding:11px 14px;transition:background .3s}
+.docs a:hover{background:var(--acc-soft)}
+.docs em{font-style:normal;font:500 .7rem/1 var(--fb);letter-spacing:.22em;text-transform:uppercase;color:var(--ink3);white-space:nowrap}
+.disc{margin:clamp(48px,7vw,88px) 0 0;padding-top:20px;border-top:1px solid var(--line);font-size:.8rem;color:var(--ink3);max-width:80ch;line-height:1.6}
+.disc b{color:var(--ink);font-weight:500}
+
+/* ——— lightbox ——— */
+.lb{position:fixed;inset:0;top:0;right:0;bottom:0;left:0;z-index:60;background:rgba(244,244,242,.97);color:var(--ink);display:flex;flex-direction:column;overscroll-behavior:contain}
+.lb[hidden]{display:none}
+.lbh{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px;font:500 .72rem/1 var(--fb);letter-spacing:.22em;text-transform:uppercase;color:var(--ink3)}
+.lbh button{height:40px;padding:0 18px;border:1px solid var(--line2);border-radius:999px;font:500 .72rem/1 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--ink);transition:border-color .3s}
+.lbh button:hover{border-color:var(--ink)}
+.lbh .ctl{display:flex;gap:8px}
+.lbs{flex:1;min-height:0;overflow:auto;display:grid;place-items:center;padding:0 22px}
+.lbs img{max-width:100%;max-height:100%;object-fit:contain;width:auto;height:auto;border-radius:var(--r)}
+.lbs.plan{background:var(--bg2);margin:0 22px;border-radius:var(--r)}
+.lbs.plan img{max-height:100%;padding:22px;border-radius:0}
+.lbs.plan.zoom{display:block;place-items:unset}
+.lbs.plan.zoom img{max-width:none;max-height:none;width:200%;padding:22px}
+.lbf{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px;font-size:.9rem;color:var(--ink2)}
+.lbf .arrows{display:flex;gap:8px}
+.lbf .arrows button{width:44px;height:44px;border:1px solid var(--line2);border-radius:50%;color:var(--ink);display:grid;place-items:center;transition:border-color .3s}
+.lbf .arrows button:hover{border-color:var(--ink)}
+.lbf .arrows svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+body.locked{overflow:hidden}
+
+/* ——— responsive ——— */
+@media (max-width:1180px){
+  .mats{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:1000px){
+  :root{--rail:0px}
+  body{display:block}
+  .rail{position:fixed;left:0;bottom:0;height:auto}
+  .bar{display:flex}
+  .rail{transform:translateX(-100%);transition:transform .5s var(--ease);width:min(330px,86vw);box-shadow:0 0 0 100vmax rgba(31,34,39,0)}
+  .rail.open{transform:none;box-shadow:0 0 0 100vmax rgba(31,34,39,.4)}
+  .railclose{display:inline-block;position:absolute;top:22px;right:20px;height:36px;padding:0 14px;border:1px solid var(--line2);border-radius:999px;font:500 .7rem/1 var(--fb);letter-spacing:.2em;text-transform:uppercase}
+  .rail .mark{margin-top:4px}
+  main{margin-left:0}
+  html{scroll-padding-top:64px}
+  .hero,.two,.two.rev,.planwrap,.desk{grid-template-columns:1fr}
+  .shead{grid-template-columns:auto 1fr}
+  .shead .smeta{grid-column:1/-1;white-space:normal}
+  .moves{grid-template-columns:1fr}
+  .levels{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .spec{grid-template-columns:1fr}
+  .wide .frame{aspect-ratio:16/10}
+}
+@media (max-width:640px){
+  .figs{grid-template-columns:1fr 1fr}
+  .mats{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:34vw}
+  .gal figure.big{grid-column:span 2;grid-row:span 1}
+  .homes{grid-template-columns:1fr}
+  .sched div{grid-template-columns:1fr;gap:4px}
+  .act{grid-template-columns:48px 1fr}
+  .act i{display:none}
+  .mk{width:20px;height:20px;margin:-10px 0 0 -10px;font-size:.7rem}
+  .mark .t{letter-spacing:.2em}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+  .sp-fence{stroke-dashoffset:0}
+}
+
+/* ——— Heights 777: site plan in metres (sheet A101) ——— */
+.sp-road{fill:rgba(31,34,39,.09)}
+.sp-verge{fill:var(--green)}
+.sp-bound{fill:var(--bg2);stroke:var(--ink);stroke-width:.14}
+.sp-drive{fill:none;stroke:rgba(31,34,39,.1);stroke-width:2.4;stroke-linecap:round}
+.sp-aisle{fill:none;stroke:var(--line2);stroke-width:.1;stroke-dasharray:.5 .4}
+.sp-bld{fill:var(--acc-soft);stroke:var(--ink);stroke-width:.17}
+.sp-mine{fill:var(--acc2);stroke:var(--acc);stroke-width:.12}
+.sp-core{fill:var(--bg2);stroke:var(--ink);stroke-width:.12}
+.sp-court{fill:var(--water);stroke:var(--line2);stroke-width:.1;stroke-dasharray:.3 .3}
+.sp-gh{fill:var(--bg3);stroke:var(--ink);stroke-width:.14}
+.sp-bay{fill:none;stroke:var(--line2);stroke-width:.08}
+.sp-bay.u{stroke-dasharray:.3 .25}
+.sp-tree{fill:var(--green2);opacity:.8}
+.sp-hedge{fill:var(--green2);opacity:.6}
+.sp-gate{fill:var(--acc2)}
+.sp-txt{font:500 1.15px var(--fb);letter-spacing:.16em;text-transform:uppercase;fill:var(--ink3);transition:fill .3s}
+.sp-txt.big{font:300 1.7px var(--fd);letter-spacing:.04em;text-transform:none;fill:var(--ink)}
+.sp-txt.dim{font-size:1.05px}
+.sp-hl{fill:none;stroke:var(--acc);stroke-width:.22;opacity:0;transition:opacity .3s;pointer-events:none}
+.sp-g.on .sp-hl{opacity:1}
+.sp-g.on .sp-txt{fill:var(--ink)}
+.sp-hot{fill:transparent;cursor:pointer}
+
+/* ——— Heights 777: schematic front elevation, 1 m = 4 units ——— */
+.ev-ground{stroke:var(--ink);stroke-width:.7}
+.ev-col{fill:var(--bg3);stroke:var(--ink);stroke-width:.4}
+.ev-car{fill:none;stroke:var(--ink3);stroke-width:.4}
+.ev-glass{fill:var(--water);stroke:var(--ink);stroke-width:.3}
+.ev-glass.mine{fill:var(--acc2);stroke:var(--acc)}
+.ev-slab{fill:var(--bg2);stroke:var(--ink);stroke-width:.6}
+.ev-par{fill:var(--bg2);stroke:var(--ink);stroke-width:.6}
+.ev-core{fill:#3a3d42;stroke:var(--ink);stroke-width:.5}
+.ev-fin{stroke:var(--acc3);stroke-width:.6}
+.ev-light{stroke:var(--acc2);stroke-width:.9}
+.ev-dim{stroke:var(--ink);stroke-width:.5}
+.ev-lead{stroke:var(--acc);stroke-width:.7;fill:none;stroke-dasharray:2 1.6}
+.ev-txt{font:500 5px var(--fb);letter-spacing:.06em;fill:var(--ink)}
+.ev-txt.mu{fill:var(--ink3);letter-spacing:.14em;text-transform:uppercase;font-size:4.4px}
+.ev-txt.acc{fill:var(--acc)}
+.ev-txt.big{font:300 7px var(--fd);letter-spacing:.02em;fill:var(--ink)}
+
+/* ——— Heights 777: plan views ——— */
+.plan.crop{max-width:500px}
+.pzone{position:absolute;top:1%;bottom:1%;left:35%;width:34%;border-radius:16px;background:var(--acc-soft);border:1px solid var(--acc2);pointer-events:none}
+.ptag{position:absolute;top:-6px;transform:translate(-50%,-100%);font:500 .7rem/1 var(--fb);letter-spacing:.2em;text-transform:uppercase;color:var(--ink3);white-space:nowrap}
+.ptag.mine{color:var(--acc)}
+.plan.full{margin-top:22px}
+
+/* ——— Heights 777: material swatches ——— */
+.sw.slab{background:linear-gradient(180deg,#f1efe9 0 70%,#f3c98a 70% 73%,#e4e0d8 73%)}
+.sw.granite{background-color:#cdc6bb;background-image:radial-gradient(rgba(58,52,46,.28) .7px,transparent 1.2px),radial-gradient(rgba(255,255,255,.55) .6px,transparent 1.1px),linear-gradient(125deg,transparent 38%,rgba(255,255,255,.4) 47%,transparent 56%);background-size:7px 7px,11px 11px,100% 100%;background-position:0 0,3px 5px,0 0}
+.sw.tile{background:#d8d4cc;background-image:linear-gradient(90deg,rgba(90,86,78,.35) 0 1px,transparent 1px),linear-gradient(180deg,rgba(90,86,78,.35) 0 1px,transparent 1px);background-size:50% 100%,100% 50%;background-position:-1px 0,0 -1px}
+.sw.glass{background:linear-gradient(150deg,#8fa2b0,#5b6b78 55%,#3a4751)}
+.sw.glass::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.22) 46%,transparent 52%)}
+.sw.core{background:#34373c;background-image:linear-gradient(90deg,transparent 0 64%,rgba(243,201,138,.9) 64% 65.5%,transparent 65.5%),repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 1px,transparent 1px 9px)}
+.sw.plant{background:#b8cbb2;background-image:radial-gradient(circle at 28% 42%,#8fa889 0 20%,transparent 21%),radial-gradient(circle at 70% 58%,#7f9a79 0 24%,transparent 25%),radial-gradient(circle at 52% 22%,#cdddc6 0 15%,transparent 16%),linear-gradient(180deg,transparent 0 78%,#f1efe9 78%)}
+
+/* ——— Heights 777: views and small screens ——— */
+.gal figure.wide{grid-column:span 2}
+.welcome .h1{font-size:clamp(2.6rem,5vw,5.2rem)}
+.welcome .hv{aspect-ratio:4/5}
+@media (min-width:1001px){.stick{position:sticky;top:32px}}
+.welcome .hv img{object-position:50% 30%}
+@media (max-width:1000px){.welcome .hv{aspect-ratio:4/3}}
+@media (max-width:640px){.gal figure.tall{grid-row:span 1}.ptag{letter-spacing:.1em}}
+</style>
+</head>
+<body>
+<!-- ——— front cover ——— -->
+<section class="front" id="front" aria-labelledby="h-front">
+  <img src="assets/corner-dusk.jpg" alt="Heights 777 at dusk from the street corner: seven storeys of curved white balcony slabs, each edged with a continuous line of warm light" fetchpriority="high" width="1800" height="2512">
+  <div class="ftop"><span>Wrace International · Private dossier</span><span>Issue 01 · October 2026</span></div>
+  <div class="fbot">
+    <div>
+      <h1 class="ftitle" id="h-front"><small>Fifth floor · Heights 777 · Wuse II, Abuja</small>Apartment 14</h1>
+    </div>
+    <a class="cue" href="#welcome">Open the dossier <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+  </div>
+</section>
+
+<header class="bar">
+  <a class="mark" href="#welcome"><span class="sb">Apt 14</span><span class="t">Heights 777</span></a>
+  <button class="idxbtn" id="idxbtn" aria-controls="rail" aria-expanded="false">Index</button>
+</header>
+
+<aside class="rail" id="rail">
+  <button class="railclose" id="railclose">Close</button>
+  <a class="mark" href="#welcome"><span class="sb">Apt 14</span><span class="t">Heights 777</span></a>
+  <nav class="index" id="index" aria-label="Sheets">
+    <a href="#welcome"><i>00</i><span>Welcome</span></a>
+    <a href="#building"><i>01</i><span>The building</span></a>
+    <a href="#residence"><i>02</i><span>Your residence</span></a>
+    <a href="#plans"><i>03</i><span>Floor plan</span></a>
+    <a href="#materials"><i>04</i><span>Materials</span></a>
+    <a href="#views"><i>05</i><span>Views</span></a>
+    <a href="#desk"><i>06</i><span>Your desk</span></a>
+  </nav>
+  <div class="tblock">
+    <dl>
+      <dt>Prepared for</dt><dd>Horizon Growth Limited</dd>
+      <dt>Property</dt><dd>Apartment 14, Heights 777<br>Fifth floor · Plot 777, CAD Zone A07</dd>
+      <dt>Prepared by</dt><dd>Wrace International</dd>
+      <dt>Issue</dt><dd>01 · October 2026 · Private</dd>
+    </dl>
+  </div>
+</aside>
+
+<main>
+
+<!-- ——— 00 · welcome ——— -->
+<section class="sheet welcome" id="welcome" aria-labelledby="h-welcome">
+  <div class="stamp"><span>Private dossier</span><span>Prepared for Horizon Growth Limited</span><span>Issue 01 · October 2026</span></div>
+  <div class="hero">
+    <div>
+      <h2 class="h1" id="h-welcome"><small>Heights 777 · Apartment 14</small>Welcome, Horizon Growth Limited.</h2>
+      <p class="lede">Apartment 14 at Heights 777 is yours: the centre residence on the fifth floor, with two bedrooms that each have their own dressing room and bath, a living room that opens south over Parakou Street and a quiet run of rooms along the north. These sheets walk you through the building, your residence, its plan and the materials it is built from.</p>
+      <div class="btns">
+        <a class="btn pri" href="#plans">Open the floor plan <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn" href="#residence">See where it sits</a>
+      </div>
+      <ul class="figs" style="padding-left:0">
+        <li><div class="n num">05</div><div class="l">Fifth floor · +15.75&nbsp;m</div></li>
+        <li><div class="n num">2</div><div class="l">Bedrooms, both en suite</div></li>
+        <li><div class="n num">2</div><div class="l">Balconies, front and rear</div></li>
+      </ul>
+    </div>
+    <figure style="margin:0">
+      <div class="frame hv">
+        <img src="assets/front-clear.jpg" alt="The Parakou Street front of Heights 777 under a clear sky: six floors of curved white balconies with glass balustrades and planting, above the open parking level" width="1800" height="2516">
+      </div>
+      <figcaption class="cap"><b>Heights 777 from Parakou Street</b> · visualisation</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ——— 01 · the building ——— -->
+<section class="sheet band" id="building" aria-labelledby="h-building">
+  <header class="shead"><span class="sno">Sheet 01 / 06</span><h2 id="h-building">The building</h2><span class="smeta">Plot 777 · CAD Zone A07 · Wuse II</span></header>
+  <div class="two">
+    <div>
+      <h3 class="title">Eighteen residences, three to a floor.</h3>
+      <p class="body">Heights 777 is a seven-storey residential building on Parakou Street, in the residential heart of Wuse II. Eighteen residences occupy six floors above an open arrival and parking level, served by two lifts and three stairs: a lift and main stair at each end of the lobby, and a back stair by the courtyard.</p>
+      <p class="body">Every residence opens onto a planted balcony behind a frameless glass balustrade, and every slab edge carries a continuous strip of warm light. Your residence is the centre one of the three on the fifth floor, between the two lift cores.</p>
+      <dl class="sched" style="margin-top:28px">
+        <div><dt>Site</dt><dd>1,136.4 m², walled; the plot fronts Parakou Street along its full southern edge</dd></div>
+        <div><dt>Building</dt><dd>35.25 × 14.58 m · 514 m² footprint, 46 per cent of the plot</dd></div>
+        <div><dt>Storeys</dt><dd>Seven: six residential floors over the arrival and parking level</dd></div>
+        <div><dt>Residences</dt><dd>Eighteen: sixteen two-bedroom residences and two one-bedroom penthouses on the fifth and sixth floors</dd></div>
+        <div><dt>Circulation</dt><dd>Two passenger lifts and three stairs, from the parking level to every floor</dd></div>
+        <div><dt>Parking</dt><dd>21 bays, beneath the building and along the plot edges; a gate house on the street</dd></div>
+        <div><dt>Height</dt><dd class="num">3.15 m floor to floor · roof slab +22.05 m · parapet +23.55 m</dd></div>
+        <div><dt>Team</dt><dd>Development by Wrace Group · architecture by A365 Designs, drawings October 2025</dd></div>
+      </dl>
+    </div>
+    <div class="stick">
+      <div class="sitebox">
+        <div class="siteplan" id="siteplan" role="img" aria-label="Site plan of Plot 777: a 41.5 by 28 metre walled plot fronting Parakou Street on the south. The building sits in the middle with parking beneath it, a gate house at the south-west corner beside the vehicle entrance, and bays along the west, north and east boundaries. The centre residence of the building, where Apartment 14 sits on the fifth floor, is highlighted."><svg id="sitesvg" viewBox="-3 -3.6 48 40.6" xmlns="http://www.w3.org/2000/svg"></svg></div>
+        <div class="sitecap" id="sitecap" aria-live="polite"><b>Apartment 14</b><i>Your residence</i><br>Fifth floor, the centre of the plan · hover any part of the plot</div>
+        <ul class="legend" id="legend">
+          <li class="mine" data-g="mine"><span class="sw"></span>Apartment 14 · yours</li>
+          <li data-g="bld"><span class="sw"></span>The building</li>
+          <li data-g="cores"><span class="sw"></span>Lift cores</li>
+          <li data-g="court"><span class="sw"></span>Courtyard</li>
+          <li data-g="under"><span class="sw"></span>Parking beneath</li>
+          <li data-g="bays"><span class="sw"></span>Perimeter bays</li>
+          <li data-g="gate"><span class="sw"></span>Gate house</li>
+          <li data-g="green"><span class="sw"></span>Trees and planting</li>
+        </ul>
+      </div>
+      <p class="cap">Indicative, drawn in metres from site plan sheet A101 (October 2025) · north to the top · bay positions approximate</p>
+    </div>
+  </div>
+  <div class="two rev enc2">
+    <figure style="margin:0">
+      <div class="frame aer"><img src="assets/balconies-aerial.jpg" alt="Looking down the planted balconies of Heights 777 from above, the curved slab edges stepping down to the street" loading="lazy" width="1800" height="2518"></div>
+      <figcaption class="cap"><b>From above</b> · the balconies stepping down to the street</figcaption>
+    </figure>
+    <div>
+      <h3 class="title">A quiet street between Maitama and the city.</h3>
+      <p class="body">Parakou Street runs through the residential heart of Wuse II, a few minutes from the restaurants and shops of Aminu Kano Crescent, with Maitama to the north and the Central Business District to the south-east. Some maps call it Parakou Crescent.</p>
+      <dl class="sched" style="margin-top:28px">
+        <div><dt>0.4 km</dt><dd>Aminu Kano Crescent: restaurants, shops and banks</dd></div>
+        <div><dt>5 min</dt><dd>Maitama, the embassies and the Transcorp Hilton</dd></div>
+        <div><dt>10 min</dt><dd>The Central Business District, Wuse Market and Banex Plaza</dd></div>
+        <div><dt>15 min</dt><dd>Jabi Lake Mall and the Jabi lakefront</dd></div>
+        <div><dt>40 min</dt><dd>Nnamdi Azikiwe International Airport, by the airport road</dd></div>
+      </dl>
+      <p class="cap">Drive times are approximate and off-peak.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ——— 02 · your residence ——— -->
+<section class="sheet" id="residence" aria-labelledby="h-residence">
+  <header class="shead"><span class="sno">Sheet 02 / 06</span><h2 id="h-residence">Your residence</h2><span class="smeta">Apartment 14 · fifth floor · centre</span></header>
+  <div class="two">
+    <div>
+      <h3 class="title">The centre residence, five floors up.</h3>
+      <p class="lede">Apartment 14 sits at the middle of the fifth floor, between the two lift cores, with the west penthouse on one side and the east residence on the other. The living room faces the street; the kitchen and both bedrooms run along the quiet north side, and there is a balcony front and rear.</p>
+      <dl class="sched facts">
+        <div><dt>Residence</dt><dd>Apartment 14 · the centre residence of three on the floor</dd></div>
+        <div><dt>Level</dt><dd class="num">Fifth floor of six · slab at +15.75 m · 3.15 m floor to floor</dd></div>
+        <div><dt>Bedrooms</dt><dd>Two, each with its own walk-in dressing room and bath</dd></div>
+        <div><dt>Living</dt><dd>Living room facing south over Parakou Street; a separate kitchen on the north side</dd></div>
+        <div><dt>Also</dt><dd>Entrance lobby and a guest WC</dd></div>
+        <div><dt>Balconies</dt><dd>Front and rear, with frameless glass balustrades and planters</dd></div>
+        <div><dt>Neighbours</dt><dd>The west penthouse and the east residence; the sixth floor above</dd></div>
+        <div><dt>Arrival</dt><dd>From the gate to the parking level, then by lift to the fifth-floor lobby</dd></div>
+      </dl>
+    </div>
+    <div class="stick">
+      <div class="elev" role="img" aria-label="Schematic front elevation of Heights 777 seen from Parakou Street: an open parking level with columns, six floors of white balcony slabs, two charcoal lift cores, and the parapet at +23.55 metres. Apartment 14 is highlighted on the fifth floor, between the two cores, at +15.75 metres.">
+        <svg id="elevsvg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"></svg>
+      </div>
+      <p class="cap"><b>Front elevation, schematic</b> · from Parakou Street · levels from the October 2025 drawings; core positions from the site plan</p>
+    </div>
+  </div>
+  <ul class="moves">
+    <li><b>Two aspects</b>The living room and its front balcony look south over Parakou Street. The kitchen and both bedrooms sit along the north side of the plan, away from the street, opening to the rear balcony.</li>
+    <li><b>Every bedroom a suite</b>Both bedrooms have a walk-in dressing room and a bath of their own, and the guest WC sits by the entrance, so visitors never pass through the private side.</li>
+    <li><b>Light along every edge</b>The curved slab beyond your front balcony carries a recessed strip of warm light along its full length. At dusk the fifth floor is drawn as a single line.</li>
+  </ul>
+  <figure class="wide" style="margin-left:0;margin-right:0">
+    <div class="frame"><img src="assets/entrance-dusk.jpg" alt="The entrance elevation at dusk, every balcony edge lit by a continuous LED strip" loading="lazy" width="1800" height="2520" style="object-position:50% 34%"></div>
+    <figcaption class="cap"><b>The front at dusk</b> · a line of light along every slab edge</figcaption>
+  </figure>
+</section>
+
+<!-- ——— 03 · floor plan ——— -->
+<section class="sheet" id="plans" aria-labelledby="h-plans">
+  <header class="shead"><span class="sno">Sheet 03 / 06</span><h2 id="h-plans">Floor plan</h2><span class="smeta">Architectural drawings · October 2025 · not to scale</span></header>
+  <h3 class="title">Your residence, read room by room.</h3>
+  <p class="lede">Apartment 14 on its own, then the whole fifth floor around it. North is at the top; Parakou Street runs beyond the front balconies at the foot. Hover a number, or a room in the list.</p>
+  <div class="tabs" role="tablist" aria-label="Plan">
+    <button class="tab" role="tab" aria-selected="true" data-floor="unit">Apartment 14</button>
+    <button class="tab" role="tab" aria-selected="false" data-floor="floor">The fifth floor</button>
+  </div>
+  <div class="planwrap">
+    <div class="planbox">
+      <div class="plan crop" id="plan">
+        <img src="assets/plan-14.png" alt="" id="planimg" width="960" height="1246">
+        <div id="labels"></div>
+      </div>
+      <div class="planfoot"><span id="planlab"></span><button class="tbtn" id="enlarge"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>Enlarge</button></div>
+    </div>
+    <div class="pside" id="pside"></div>
+  </div>
+  <div class="levels num" id="levels">
+    <div><div class="n">±0.00</div><div class="l">Arrival · parking</div></div>
+    <div><div class="n">+3.15</div><div class="l">First floor · first residences</div></div>
+    <div class="on"><div class="n">+15.75</div><div class="l">Fifth floor · Apartment 14</div></div>
+    <div><div class="n">+22.05</div><div class="l">Roof slab, metres</div></div>
+  </div>
+  <p class="foot-note">Plan redrawn from the architectural drawings of October 2025 with dimensions and annotations removed; the numbered markers sit where the rooms are labelled on the sheet. The fifth and sixth floors share this plan. Layouts are indicative and remain subject to final design.</p>
+</section>
+
+<!-- ——— 04 · materials ——— -->
+<section class="sheet band" id="materials" aria-labelledby="h-materials">
+  <header class="shead"><span class="sno">Sheet 04 / 06</span><h2 id="h-materials">Materials &amp; specification</h2><span class="smeta">Drawings and schedules · October 2025</span></header>
+  <h3 class="title">One standard, every floor.</h3>
+  <p class="lede">Finishes and systems as set out in the architectural drawings and schedules. Selections shown in the visualisations are indicative of quality and tone.</p>
+  <div class="mats" style="margin-top:40px">
+    <div class="mat"><div class="sw slab"></div><div class="mt"><i>M01</i><b>White slab edge</b><span>Curved balcony slabs with a recessed continuous LED strip</span></div></div>
+    <div class="mat"><div class="sw granite"></div><div class="mt"><i>M02</i><b>Polished granite</b><span>1200 × 600 mm, in the living room and lobbies</span></div></div>
+    <div class="mat"><div class="sw tile"></div><div class="mt"><i>M03</i><b>Vitrified tile</b><span>600 × 600 mm floor tiles in the bedrooms</span></div></div>
+    <div class="mat"><div class="sw glass"></div><div class="mt"><i>M04</i><b>Frameless glass</b><span>Balustrades and full-height sliding doors to the balconies</span></div></div>
+    <div class="mat"><div class="sw core"></div><div class="mt"><i>M05</i><b>Charcoal core</b><span>Dark stone-effect cladding with slender vertical light lines</span></div></div>
+    <div class="mat"><div class="sw plant"></div><div class="mt"><i>M06</i><b>Planters</b><span>Integral planters along every balcony edge</span></div></div>
+  </div>
+  <div class="spec">
+    <div>
+      <h4>Structure &amp; envelope</h4>
+      <dl class="sched">
+        <div><dt>Frame</dt><dd>Reinforced-concrete frame with 350 mm beams; 3.15 m floor to floor on every level</dd></div>
+        <div><dt>Walls</dt><dd>230 mm sandcrete block in stretcher bond; the lift and stair cores clad in dark stone-effect panels</dd></div>
+        <div><dt>Balconies</dt><dd>Curved slab edges with recessed continuous LED lighting; frameless glass balustrades; integral planters</dd></div>
+        <div><dt>Roof</dt><dd>0.9 gauge longspan aluminium sheeting, PU-insulated, on a steel truss behind a 1.5 m parapet</dd></div>
+      </dl>
+    </div>
+    <div>
+      <h4>Finishes</h4>
+      <dl class="sched">
+        <div><dt>Living &amp; lobbies</dt><dd>1200 × 600 × 12 mm polished granite on a 50 mm screed</dd></div>
+        <div><dt>Bedrooms</dt><dd>600 × 600 × 10 mm vitrified floor tiles</dd></div>
+        <div><dt>Bathrooms</dt><dd>Both bedrooms en suite, each with its own walk-in dressing room; a guest WC by the entrance</dd></div>
+        <div><dt>Parking level</dt><dd>600 × 300 mm glazed ceramic tiles on screed at the arrival level</dd></div>
+      </dl>
+    </div>
+    <div>
+      <h4>Openings &amp; security</h4>
+      <dl class="sched">
+        <div><dt>Entrance</dt><dd>Double-panel composite pivot security door to the residence and the lobby</dd></div>
+        <div><dt>To balconies</dt><dd>Triple-panel glass sliding doors on aluminium frames from the living room, bedrooms and kitchen</dd></div>
+        <div><dt>Internal</dt><dd>Steel security swing doors on aluminium frames to the bedrooms and kitchen; glazed cut-out doors to lobbies and terraces</dd></div>
+        <div><dt>Site</dt><dd>Walled plot with a 13 m² gate house and a screened vehicle entrance on Parakou Street</dd></div>
+      </dl>
+    </div>
+    <div>
+      <h4>Circulation &amp; arrival</h4>
+      <dl class="sched">
+        <div><dt>Lifts</dt><dd>Two passenger lifts, one in each core, from the parking level to every residential floor</dd></div>
+        <div><dt>Stairs</dt><dd>A main stair beside each lift, and a back stair by the courtyard</dd></div>
+        <div><dt>Parking</dt><dd>21 bays: beneath the building at the arrival level and along the plot edges</dd></div>
+        <div><dt>Daylight</dt><dd>A lightwell courtyard beside the core brings daylight into the lobbies on every floor</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- ——— 05 · views ——— -->
+<section class="sheet band" id="views" aria-labelledby="h-views">
+  <header class="shead"><span class="sno">Sheet 05 / 06</span><h2 id="h-views">Views</h2><span class="smeta">Visualisations · artists' impressions</span></header>
+  <h3 class="title">Seven views, two skies.</h3>
+  <p class="lede" style="margin-bottom:36px">The street front under clear and overcast skies, the corner and the arrival at dusk, and the balconies from above. Open any view full screen.</p>
+  <div class="gal" id="gal">
+    <figure class="big" data-lb="0"><img src="assets/front-clear.jpg" alt="The street front under a clear sky" loading="lazy" style="object-position:50% 38%"><figcaption><b>The street front</b> · clear sky</figcaption></figure>
+    <figure class="tall" data-lb="1"><img src="assets/corner-dusk.jpg" alt="The corner at dusk" loading="lazy"><figcaption><b>The corner</b> · dusk</figcaption></figure>
+    <figure data-lb="2"><img src="assets/entrance-dusk.jpg" alt="The arrival at dusk" loading="lazy" style="object-position:50% 40%"><figcaption><b>Arrival</b> · dusk</figcaption></figure>
+    <figure data-lb="3"><img src="assets/entrance-day.jpg" alt="The arrival at noon" loading="lazy" style="object-position:50% 40%"><figcaption><b>Arrival</b> · noon</figcaption></figure>
+    <figure data-lb="4"><img src="assets/balconies-aerial.jpg" alt="The balconies from above" loading="lazy"><figcaption><b>Balconies</b> · from above</figcaption></figure>
+    <figure class="wide" data-lb="5"><img src="assets/front-overcast.jpg" alt="The street front under an overcast sky" loading="lazy" style="object-position:50% 42%"><figcaption><b>The street front</b> · overcast</figcaption></figure>
+    <figure data-lb="6"><img src="assets/street-day.jpg" alt="The street approach by day" loading="lazy" style="object-position:50% 45%"><figcaption><b>Street approach</b> · day</figcaption></figure>
+  </div>
+</section>
+
+<!-- ——— 06 · your desk ——— -->
+<section class="sheet" id="desk" aria-labelledby="h-desk">
+  <header class="shead"><span class="sno">Sheet 06 / 06</span><h2 id="h-desk">Your desk</h2><span class="smeta">Wrace International · Abuja</span></header>
+  <div class="desk">
+    <div>
+      <h3 class="title">Your desk at Wrace International.</h3>
+      <p class="lede">For anything about Apartment 14 — a site visit, a document, a question about a finish or a date — one message reaches us.</p>
+      <div class="acts">
+        <a class="act" href="https://www.google.com/maps/search/?api=1&amp;query=83%20Adetokunbo%20Ademola%20Crescent%2C%20Abuja" target="_blank" rel="noopener"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><b>Office</b><span>The District by Wrace, 83 Close Adetokunbo Ademola Cres, Abuja</span></span><i>Map</i></a>
+        <a class="act" href="mailto:wraceinternational@gmail.com?subject=Apartment%2014%2C%20Heights%20777%20%E2%80%94%20Horizon%20Growth%20Limited"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><b>Email</b><span>wraceinternational@gmail.com</span></span><i>Write</i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Documents</h4>
+      <ul class="docs">
+        <li><div>Heights 777 brochure<span>Twelve-page print edition of the full building, PDF</span></div><a href="https://mizanqist.github.io/heights-777/heights-777-brochure.pdf" target="_blank" rel="noopener">Download</a></li>
+        <li><div>Architectural drawings<span>Plot 777 full set, October 2025</span></div><em>On request</em></li>
+        <li><div>Finishes &amp; door schedules<span>Part of the architectural drawings</span></div><em>On request</em></li>
+      </ul>
+    </div>
+  </div>
+  <p class="disc"><b>Prepared by Wrace International for Horizon Growth Limited</b> · Issue 01 · October 2026 · Private, not for circulation. Visualisations are artists' impressions. Levels and dimensions are taken from the architectural drawings of October 2025 and are indicative; layouts and finishes remain subject to final design, approvals and construction, and may be substituted with approved equivalents.</p>
+</section>
+
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged view" hidden>
+  <div class="lbh"><span id="lbcnt">01 / 07</span><div class="ctl"><button id="zoom" hidden>Zoom</button><button id="lbclose">Close</button></div></div>
+  <div class="lbs" id="lbs"><img id="lbimg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=""></div>
+  <div class="lbf"><span id="lbcap"></span><div class="arrows"><button id="lbprev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button><button id="lbnext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button></div></div>
+</div>
+
+<script>
+(function(){
+  'use strict';
+  var $ = function(s, r){ return (r||document).querySelector(s); };
+  var $$ = function(s, r){ return Array.prototype.slice.call((r||document).querySelectorAll(s)); };
+  var NS = 'http://www.w3.org/2000/svg';
+  function asset(p){ return (window.__assets && window.__assets[p]) || p; }
+  function el(tag, a, parent){ var e = document.createElementNS(NS, tag); for(var k in a) e.setAttribute(k, a[k]); parent.appendChild(e); return e; }
+  function txt(parent, x, y, s, cls, extra){ var t = el('text', {x:x, y:y, 'class':cls}, parent); for(var k in (extra||{})) t.setAttribute(k, extra[k]); t.textContent = s; return t; }
+
+  /* ——— rail: active sheet, phone index ——— */
+  var links = $$('#index a'), rail = $('#rail'), idxbtn = $('#idxbtn');
+  function setActive(id){ links.forEach(function(a){ a.classList.toggle('on', a.getAttribute('href') === '#'+id); }); }
+  var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting) setActive(e.target.id); }); }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+  $$('main .sheet').forEach(function(s){ io.observe(s); });
+  function openRail(o){ rail.classList.toggle('open', o); idxbtn.setAttribute('aria-expanded', String(o)); }
+  idxbtn.addEventListener('click', function(){ openRail(!rail.classList.contains('open')); });
+  $('#railclose').addEventListener('click', function(){ openRail(false); });
+  links.forEach(function(a){ a.addEventListener('click', function(){ openRail(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && rail.classList.contains('open')) openRail(false); });
+
+  /* ——— site plan: metres from site plan sheet A101, as in the Heights 777 brochure ——— */
+  (function(){
+    var svg = $('#sitesvg'), i, G = {};
+    el('rect', {'class':'sp-verge', x:-3, y:28, width:48, height:2.2}, svg);
+    el('rect', {'class':'sp-road', x:-3, y:30.2, width:48, height:6.8}, svg);
+    txt(svg, 20.8, 34, 'Parakou Street', 'sp-txt', {'text-anchor':'middle'});
+    el('path', {'class':'sp-bound', d:'M12.1,28 H0 V0 H41.5 V27.95 H19.2'}, svg);
+    ['green','bays','under','gate','bld','mine','court','cores'].forEach(function(k){ G[k] = el('g', {'class':'sp-g', 'data-g':k}, svg); });
+    /* hedges inside the walls */
+    [[5.4,26.9,6.4,.9],[19.6,26.9,21.4,.9],[.4,.4,.9,24],[40.2,.4,.9,26.8]].forEach(function(r){ el('rect', {'class':'sp-hedge', x:r[0], y:r[1], width:r[2], height:r[3]}, G.green); });
+    /* the drive from the gate into the undercroft, and the aisle beneath the building */
+    el('path', {'class':'sp-drive', d:'M15.6,31 V22.6'}, G.under);
+    el('path', {'class':'sp-aisle', d:'M4.6,17.6 H37.2'}, G.under);
+    /* perimeter bays: west 6, east 7, north 2 */
+    for(i=0;i<6;i++) el('rect', {'class':'sp-bay', x:.5, y:1.8+i*2.55, width:2.4, height:2.3}, G.bays);
+    for(i=0;i<7;i++) el('rect', {'class':'sp-bay', x:38.7, y:2.4+i*2.55, width:2.4, height:2.3}, G.bays);
+    el('rect', {'class':'sp-bay', x:13.8, y:1.4, width:2.3, height:4.8}, G.bays); el('rect', {'class':'sp-bay', x:24.6, y:1.4, width:2.3, height:4.8}, G.bays);
+    txt(G.bays, 1.7, 17.8, '6', 'sp-txt dim', {'text-anchor':'middle'}); txt(G.bays, 39.9, 21.2, '7', 'sp-txt dim', {'text-anchor':'middle'}); txt(G.bays, 20.35, 4.3, '2 bays', 'sp-txt dim', {'text-anchor':'middle'});
+    el('path', {'class':'sp-hl', d:'M.2,1.5 H3.2 V17.4 H.2 Z M38.4,2.1 H41.4 V20.4 H38.4 Z M13.5,1.1 H16.4 V6.5 H13.5 Z M24.3,1.1 H27.2 V6.5 H24.3 Z'}, G.bays);
+    /* bays beneath the building */
+    [[5.4,8.2],[8.4,8.2],[11.4,8.2],[27.6,15.2],[30.6,15.2],[33.6,15.2]].forEach(function(c){ el('rect', {'class':'sp-bay u', x:c[0], y:c[1], width:2.5, height:5}, G.under); });
+    el('path', {'class':'sp-hl', d:'M5.1,7.9 H14.2 V13.5 H5.1 Z M27.3,14.9 H36.4 V20.5 H27.3 Z M14.4,31.2 V22.4 H16.8 V31.2 Z'}, G.under);
+    /* gate house and the entrance */
+    el('rect', {'class':'sp-gh', x:.3, y:25.1, width:4.7, height:2.8}, G.gate);
+    txt(G.gate, 2.65, 24.5, 'Gate house', 'sp-txt dim', {'text-anchor':'middle'});
+    el('path', {'class':'sp-gate', d:'M15.6,27.2 l.9,.8 -.9,.8 -.9,-.8 Z'}, G.gate);
+    txt(G.gate, 15.6, 29.6, 'Entrance', 'sp-txt', {'text-anchor':'middle', style:'fill:var(--acc)'});
+    el('path', {'class':'sp-hl', d:'M0,24.7 H5.3 V28.3 H0 Z M11.8,26.6 H19.5 V30 H11.8 Z'}, G.gate);
+    /* the building: 35.25 by 14.58 m with rounded balcony corners */
+    el('path', {'class':'sp-bld', d:'M5,7 H36.7 a1.8,1.8 0 0 1 1.8,1.8 V19.8 a1.8,1.8 0 0 1 -1.8,1.8 H5 a1.8,1.8 0 0 1 -1.8,-1.8 V8.8 a1.8,1.8 0 0 1 1.8,-1.8 Z'}, G.bld);
+    txt(G.bld, 8.9, 17.6, 'Heights 777', 'sp-txt big', {'text-anchor':'middle', style:'font-size:1.45px'});
+    txt(G.bld, 8.9, 19.3, 'Seven storeys', 'sp-txt dim', {'text-anchor':'middle'});
+    el('path', {'class':'sp-hl', d:'M2.6,6.4 H39.1 V22.2 H2.6 Z'}, G.bld);
+    /* Apartment 14: the centre residence, 35-69 % of the floor plan */
+    el('rect', {'class':'sp-mine', x:15.6, y:7, width:12, height:14.6, rx:.4}, G.mine);
+    txt(G.mine, 21.6, 10.6, 'Apartment 14', 'sp-txt big', {'text-anchor':'middle'});
+    txt(G.mine, 21.6, 12.3, 'Fifth floor', 'sp-txt dim', {'text-anchor':'middle', style:'fill:var(--ink)'});
+    el('path', {'class':'sp-hl', d:'M15.3,6.7 H27.9 V21.9 H15.3 Z'}, G.mine);
+    /* the courtyard and the two cores */
+    el('rect', {'class':'sp-court', x:15.7, y:13.8, width:2.2, height:1.7}, G.court);
+    el('path', {'class':'sp-hl', d:'M15.3,13.4 H18.3 V15.9 H15.3 Z'}, G.court);
+    el('rect', {'class':'sp-core', x:14.6, y:15.6, width:3, height:3.9}, G.cores);
+    el('rect', {'class':'sp-core', x:23.4, y:16.6, width:3, height:3.6}, G.cores);
+    txt(G.cores, 16.1, 17.9, 'Lift', 'sp-txt dim', {'text-anchor':'middle'}); txt(G.cores, 24.9, 18.7, 'Lift', 'sp-txt dim', {'text-anchor':'middle'});
+    el('path', {'class':'sp-hl', d:'M14.2,15.2 H18 V19.9 H14.2 Z M23,16.2 H26.8 V20.6 H23 Z'}, G.cores);
+    /* street trees along the verge */
+    [1.3,3.7,6.1,22,25.6,29.2,32.8,36.4].forEach(function(x){ el('circle', {'class':'sp-tree', cx:x, cy:29.1, r:.95}, G.green); });
+    el('path', {'class':'sp-hl', d:'M-.2,27.6 H43 V30.3 H-.2 Z'}, G.green);
+    /* scale bar (five metres) and north arrow */
+    el('path', {d:'M33.5,-1.4 H38.5 M33.5,-1.9 V-.9 M38.5,-1.9 V-.9', fill:'none', stroke:'var(--ink)', 'stroke-width':.09}, svg);
+    txt(svg, 36, -2.3, '5 m', 'sp-txt', {'text-anchor':'middle'});
+    txt(svg, .3, -1.05, 'North up', 'sp-txt dim');
+    var n = el('g', {transform:'translate(-1.2,-1.4)'}, svg); el('circle', {cx:0, cy:0, r:1, fill:'none', stroke:'var(--line2)', 'stroke-width':.08}, n); el('path', {d:'M0,-.75 L.35,.5 L0,.25 L-.35,.5 Z', fill:'var(--ink)'}, n);
+    /* hotspots, later ones on top */
+    var HOT = [['bld',2.6,6.4,36.5,15.8],['mine',15.6,7,12,14.6],['under',14.4,22.4,2.4,8.8],['under',5.1,7.9,9.1,5.6],['under',27.3,14.9,9.1,5.6],['bays',.2,1.5,3,16],['bays',38.4,2.1,3,18.3],['gate',0,24.7,5.3,3.6],['cores',14.2,15.2,3.8,4.7],['cores',23,16.2,3.8,4.4],['court',15.3,13.4,3,2],['green',-.2,27.6,43.2,2.7]];
+    var hot = el('g', {}, svg);
+    HOT.forEach(function(r){ el('rect', {'class':'sp-hot', 'data-g':r[0], x:r[1], y:r[2], width:r[3], height:r[4]}, hot); });
+    var INFO = {
+      mine:['Apartment 14', 'The centre residence of the three on the fifth floor, between the two lift cores; shaded over the footprint.'],
+      bld:['The building', 'Seven storeys on a 35 by 15 m footprint, held back from every boundary · 514 m²'],
+      cores:['Lift cores', 'A lift and main stair at each end of the lobby, reached from the parking level'],
+      court:['Courtyard lightwell', 'A small open court beside the west core brings daylight into every lobby'],
+      under:['Parking beneath', 'The whole ground level is open; cars turn in from the gate and park under the residences · 6 bays'],
+      bays:['Perimeter bays', 'Along the west, north and east boundaries, reached through the undercroft · 15 bays'],
+      gate:['Gate house and entrance', 'A screened vehicle entrance on Parakou Street, with the 13 m² gate house beside it'],
+      green:['Trees and planting', 'Eight street trees along the verge, hedges inside the front wall, planters on every balcony']
+    };
+    var cap = $('#sitecap'), CAP0 = cap.innerHTML, legend = $('#legend');
+    function setG(g){
+      $$('.sp-g', svg).forEach(function(x){ x.classList.toggle('on', x.dataset.g===g); });
+      $$('li', legend).forEach(function(li){ li.classList.toggle('on', li.dataset.g===g); });
+      cap.innerHTML = g ? '<b>'+INFO[g][0]+'</b>'+(g==='mine' ? '<i>Your residence</i>' : '')+'<br>'+INFO[g][1] : CAP0;
+    }
+    ['mouseover','focusin'].forEach(function(ev){ hot.addEventListener(ev, function(e){ var t = e.target.closest('[data-g]'); if(t) setG(t.dataset.g); }); });
+    hot.addEventListener('mouseout', function(e){ if(!e.relatedTarget || !e.relatedTarget.closest || !e.relatedTarget.closest('.sp-hot')) setG(null); });
+    $$('li', legend).forEach(function(li){ li.addEventListener('mouseenter', function(){ setG(li.dataset.g); }); li.addEventListener('mouseleave', function(){ setG(null); }); li.addEventListener('click', function(){ setG(li.classList.contains('on') ? null : li.dataset.g); }); });
+  })();
+
+  /* ——— front elevation: schematic, metres from the drawings, 1 m = 4 units ——— */
+  (function(){
+    var svg = $('#elevsvg'), K = 4, W = 35.25, TOP = 23.55, FF = 3.15, n, s;
+    function X(m){ return +(m*K).toFixed(2); }
+    function Y(h){ return +((TOP-h)*K).toFixed(2); }
+    function box(cls, x0, x1, h0, h1, extra){ var a = {'class':cls, x:X(x0), y:Y(h1), width:X(x1-x0), height:+((h1-h0)*K).toFixed(2)}; for(var k in (extra||{})) a[k] = extra[k]; return el('rect', a, svg); }
+    function line(cls, x0, h0, x1, h1){ return el('line', {'class':cls, x1:X(x0), y1:Y(h0), x2:X(x1), y2:Y(h1)}, svg); }
+    var CORES = [[11.4,14.4],[20.2,23.2]], BAYS = [[.9,11.4],[14.4,20.2],[23.2,W-.9]];
+    /* the open parking level: columns and parked cars */
+    [1.2,7.4,13.6,19.8,26,32.2].forEach(function(x){ box('ev-col', x, x+.5, 0, FF-.4); });
+    [2.2,8.8,24.6,29.2].forEach(function(x){ box('ev-car', x, x+4.2, .15, 1.45, {rx:2}); });
+    /* six residential floors: recessed glazing, then the curved slab edge beneath each floor */
+    for(n=1; n<=6; n++){
+      BAYS.forEach(function(b, bi){ box('ev-glass'+(n===5 && bi===1 ? ' mine' : ''), b[0], b[1], n*FF+.05, (n+1)*FF-.4); });
+      line('ev-dim', .9, n*FF+1.05, W-.9, n*FF+1.05).setAttribute('style', 'opacity:.35');
+    }
+    for(n=1; n<=7; n++){ box('ev-slab', 0, W, n*FF-.4, n*FF+.05, {rx:1.6}); line('ev-light', .5, n*FF-.4, W-.5, n*FF-.4); }
+    box('ev-par', .5, W-.5, 7*FF+.05, TOP);
+    /* the two charcoal cores, each with a slender light line */
+    CORES.forEach(function(c){ box('ev-core', c[0], c[1], 0, TOP+.6); line('ev-fin', (c[0]+c[1])/2, 1, (c[0]+c[1])/2, TOP-.6); });
+    line('ev-ground', -3, 0, W+3, 0);
+    /* floor codes on the left, levels on the right */
+    ['G','01','02','03','04','05','06'].forEach(function(c, i){ txt(svg, X(-1.2), Y(i*FF+1.3), c, 'ev-txt'+(i===5 ? ' acc' : ' mu'), {'text-anchor':'end'}); });
+    [[7*FF,'+22.05 roof'],[6*FF,'+18.90 sixth'],[5*FF,'+15.75 fifth'],[FF,'+3.15 first'],[0,'±0.00 arrival']].forEach(function(L){
+      line('ev-dim', W+1, L[0], W+3.5, L[0]); txt(svg, X(W+4.2), Y(L[0])+1.8, L[1], 'ev-txt'+(L[0]===5*FF ? ' acc' : ''));
+    });
+    /* Apartment 14: leader from the fifth-floor bay up above the parapet */
+    s = 17.3; el('path', {'class':'ev-lead', d:'M'+X(s)+' '+Y(5*FF+1.4)+' V'+Y(TOP+3.4)+' H'+X(s+2)}, svg);
+    txt(svg, X(s+2.6), Y(TOP+3.4)+2.4, 'Apartment 14', 'ev-txt big');
+    txt(svg, X(5.7), Y(TOP+1.2), 'west', 'ev-txt mu', {'text-anchor':'middle'}); txt(svg, X(29.2), Y(TOP+1.2), 'east', 'ev-txt mu', {'text-anchor':'middle'});
+    /* overall width */
+    line('ev-dim', 0, -2.2, W, -2.2); line('ev-dim', 0, -1.6, 0, -2.8); line('ev-dim', W, -1.6, W, -2.8);
+    txt(svg, X(W/2), Y(-4.2), '35.25 m · Parakou Street front', 'ev-txt', {'text-anchor':'middle'});
+    svg.setAttribute('viewBox', X(-4.5)+' '+Y(TOP+5.2)+' '+X(W+16.5)+' '+X(TOP+5.2+5.4));
+  })();
+
+  /* ——— floor plan: Apartment 14 alone (crop of the sheet, x 33–73 %) and the whole fifth floor ——— */
+  var ROOMS = {
+    unit:[
+      {g:'Apartment 14', r:[['Living room',46.0,60.4],['Kitchen',18.5,21.7],['Bedroom 1',43.75,20.2],['Dressing room & bath · bedroom 1',59.0,24.5],['Bedroom 2',87.25,20.4],['Dressing room & bath · bedroom 2',71.75,26.0],['Entrance lobby',65.0,37.0],['Guest WC',59.5,84.8],['Balcony, front',40.75,89.5],['Balcony, rear',47.0,3.9]]},
+      {g:'Shared core', r:[['Lift, west core',15.25,69.4],['Lobby, west core',11.25,80.2],['Courtyard lightwell',15.25,52.4],['Main stair, east',71.75,49.9],['Lift, east core',70.5,85.2],['Lobby, east core',76.25,72.3]]}
+    ],
+    floor:[
+      {g:'Apartment 14', r:[['Living room',51.4,60.4],['Kitchen',40.4,21.7],['Bedroom 1',50.5,20.2],['Dressing room & bath · bedroom 1',56.6,24.5],['Bedroom 2',67.9,20.4],['Dressing room & bath · bedroom 2',61.7,26.0],['Entrance lobby',59.0,37.0],['Guest WC',56.8,84.8],['Balcony, front',49.3,89.5],['Balcony, rear',51.8,3.9]]},
+      {g:'Shared core', r:[['Lift, west core',39.1,69.4],['Main stair, west',35.6,62.1],['Lobby, west core',37.5,80.2],['Courtyard lightwell',39.1,52.4],['Courtyard lobby',35.8,41.2],['Back stair',31.9,16.8],['Lift, east core',61.2,85.2],['Main stair, east',61.7,49.9],['Lobby, east core',63.5,72.3]]}
+    ]
+  };
+  var VIEW = {
+    unit:{src:'assets/plan-14.png', sz:[960,1246], h:'Apartment 14', rt:'Fifth floor · +15.75 m · two bedrooms', sum:'The living room sits at the centre of the plan and opens south to the front balcony over Parakou Street, with the guest WC beside it. The kitchen and both bedroom suites run along the north side, opening to the rear balcony; the entrance lobby links the two halves.', lab:'<b>Apartment 14</b> · north to the top · the front balcony at the foot', alt:'Plan of Apartment 14: living room, kitchen, two bedrooms each with a dressing room and bath, entrance lobby, guest WC, and balconies front and rear.'},
+    floor:{src:'assets/plan-upper.png', sz:[2400,1246], h:'The fifth floor', rt:'Three residences · two lift cores', sum:'Apartment 14 is the centre residence, shaded on the plan. The west penthouse, a one-bedroom residence with a second lounge, takes the left of the floor and the east two-bedroom residence the right; the lift cores and the courtyard lightwell sit between them. The sixth floor repeats the plan, with an infinity pool at the west penthouse.', lab:'<b>Fifth floor</b> · Apartment 14 shaded · Parakou Street beyond the foot of the plan', alt:'Fifth floor plan: the west penthouse, Apartment 14 at the centre and the east residence, around two lift cores and a courtyard lightwell.'}
+  };
+  var plan = $('#plan'), planimg = $('#planimg'), labels = $('#labels'), planlab = $('#planlab'), pside = $('#pside'), curView = 'unit';
+  function hi(i, on){
+    $$('.mk', labels).forEach(function(m){ var me = m.dataset.i===String(i); m.classList.toggle('hi', on && me); m.classList.toggle('dim', on && !me); });
+    $$('.rl li', pside).forEach(function(li){ li.classList.toggle('hi', on && li.dataset.i===String(i)); });
+  }
+  function renderPlan(v){
+    var F = VIEW[v], n = 0, lh = '', side = '';
+    plan.classList.toggle('crop', v==='unit'); plan.classList.toggle('full', v==='floor');
+    planimg.src = asset(F.src); planimg.width = F.sz[0]; planimg.height = F.sz[1]; planimg.alt = F.alt; planlab.innerHTML = F.lab;
+    if(v==='floor') lh += '<div class="pzone"></div><span class="ptag" style="left:17%">West penthouse</span><span class="ptag mine" style="left:52%">Apartment 14</span><span class="ptag" style="left:85%">East residence</span>';
+    ROOMS[v].forEach(function(grp, gi){
+      var items = '';
+      grp.r.forEach(function(r){ n++; lh += '<span class="mk'+(gi?' r':'')+'" data-i="'+n+'" style="left:'+r[1]+'%;top:'+r[2]+'%" title="'+r[0]+'">'+n+'</span>'; items += '<li data-i="'+n+'"><i>'+String(n).padStart(2,'0')+'</i><span>'+r[0]+'</span></li>'; });
+      side += '<div><h4><span class="k'+(gi?' r':'')+'"></span>'+grp.g+'</h4><ul class="rl">'+items+'</ul></div>';
+    });
+    labels.innerHTML = lh;
+    pside.innerHTML = '<h3>'+F.h+'</h3><span class="rt">'+F.rt+'</span><p>'+F.sum+'</p><div class="homes">'+side+'</div>';
+    $$('.mk', labels).forEach(function(m){ m.addEventListener('mouseenter', function(){ hi(m.dataset.i, true); }); m.addEventListener('mouseleave', function(){ hi(null, false); }); });
+    $$('.rl li', pside).forEach(function(li){ li.addEventListener('mouseenter', function(){ hi(li.dataset.i, true); }); li.addEventListener('mouseleave', function(){ hi(null, false); }); });
+  }
+  renderPlan(curView);
+  if(window.__PRINT) window.__renderPlan = renderPlan;
+  $$('.tab[data-floor]').forEach(function(tab){ tab.addEventListener('click', function(){ if(tab.dataset.floor===curView) return; $$('.tab[data-floor]').forEach(function(t){ t.setAttribute('aria-selected', String(t===tab)); }); curView = tab.dataset.floor; renderPlan(curView); }); });
+
+  /* ——— lightbox: views and plans ——— */
+  var VIEWS = $$('#gal figure').map(function(f){ var im = $('img', f); return {src:im.getAttribute('src'), cap:$('figcaption', f).textContent}; });
+  var PLANS = ['unit','floor'].map(function(v){ return {src:VIEW[v].src, cap:(v==='unit' ? 'Apartment 14 · fifth floor, Heights 777' : 'The fifth floor · Apartment 14 at the centre'), plan:true}; });
+  var lb = $('#lb'), lbs = $('#lbs'), lbimg = $('#lbimg'), lbcap = $('#lbcap'), lbcnt = $('#lbcnt'), zoom = $('#zoom'), set = VIEWS, cur = 0, lastFocus = null;
+  function show(i){
+    cur = (i + set.length) % set.length; var it = set[cur];
+    lbimg.src = asset(it.src); lbimg.alt = it.cap; lbcap.textContent = it.cap; lbcnt.textContent = String(cur+1).padStart(2,'0')+' / '+String(set.length).padStart(2,'0');
+    lbs.classList.toggle('plan', !!it.plan); lbs.classList.remove('zoom'); zoom.hidden = !it.plan; zoom.textContent = 'Zoom';
+  }
+  function openLB(items, i){ set = items; lastFocus = document.activeElement; show(i); lb.hidden = false; document.body.classList.add('locked'); $('#lbclose').focus(); }
+  function closeLB(){ lb.hidden = true; document.body.classList.remove('locked'); if(lastFocus && lastFocus.focus) lastFocus.focus({preventScroll:true}); }
+  $$('#gal figure').forEach(function(f){ f.addEventListener('click', function(){ openLB(VIEWS, +f.dataset.lb); }); f.setAttribute('tabindex','0'); f.setAttribute('role','button'); f.addEventListener('keydown', function(e){ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); openLB(VIEWS, +f.dataset.lb); } }); });
+  $('#enlarge').addEventListener('click', function(){ openLB(PLANS, curView==='unit' ? 0 : 1); });
+  $('#lbclose').addEventListener('click', closeLB);
+  $('#lbprev').addEventListener('click', function(){ show(cur-1); });
+  $('#lbnext').addEventListener('click', function(){ show(cur+1); });
+  zoom.addEventListener('click', function(){ var z = lbs.classList.toggle('zoom'); zoom.textContent = z ? 'Fit' : 'Zoom'; if(z){ lbs.scrollLeft = (lbs.scrollWidth - lbs.clientWidth)/2; } });
+  lbs.addEventListener('click', function(e){ if(e.target === lbs) closeLB(); });
+  document.addEventListener('keydown', function(e){ if(lb.hidden) return; if(e.key==='Escape') closeLB(); else if(e.key==='ArrowLeft') show(cur-1); else if(e.key==='ArrowRight') show(cur+1); });
+  var tx0 = null; lbs.addEventListener('touchstart', function(e){ tx0 = e.touches[0].clientX; }, {passive:true}); lbs.addEventListener('touchend', function(e){ if(tx0===null || lbs.classList.contains('zoom')) return; var dx = e.changedTouches[0].clientX - tx0; if(Math.abs(dx) > 50) show(dx < 0 ? cur+1 : cur-1); tx0 = null; }, {passive:true});
+})();
+</script>
+</body>
+</html>
